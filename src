@@ -1,0 +1,1486 @@
+// Fleet Ships: Novictus, Avaritia, Discivolo, Pelavita
+// Fleet Flagship: Avaritia
+// Fleet Commander: Commodore Roden Furen Hidraa
+// Crew Ranks:
+    // Civilian (Civ)
+    // Ensign (Ens)
+    // Lieutenant Junior Grade (LJG)
+    // Lieutenant (Ltn)
+    // Lieutenant Commander (LCdr)
+    // Commander (Cdr)
+    // Captain (Capt)
+    // Commodore (Cmdr)
+    // Rear Admiral Lower Half (RAdL)
+    // Rear Admiral Upper Half (RAdU)
+    // Vice Admiral (VAd)
+    // Admiral (Adm)
+    // Fleet Admiral (FAd)
+// Ship Services:
+    // Shielding:
+        // Armor Technology - Protects the ship from micrometeorites, cosmic rays, and some weapons systems
+        // Gravitational Field - Applies pressure to allow solid objects to pass through it, but not air
+        // Temporary Airlock - Used to safely enter a depressurized area to repair it
+    // Propulsion:
+        // WarpPoint Drive - Warps spacetime to propel the ship to speeds up to ten times the speed of light
+        // Casimir Thrusters - Utilizes the Casimir force to propel shuttles and pods at sub-light speeds
+    // Life Support:
+        // Waste Recycling - Recycles air, water and other waste to provide clean air and water for the crew
+        // Gravitational Field Generator - Provides gravity to areas of the ship
+        // Hydroponics - Creates food for the crew to eat
+        // Reactor - Generates energy from a fusion reactor
+    // Weapons:
+        // Laser - Fires a laser beam at the target, mainly used against small ships
+        // Plasma - Fires high-energy plasma at the target, mainly used against large ships or large asteroids
+        // EMP Emitter - Disables electronics on the target, mainly used against ships
+        // Warp Projectile - Propels a projectile through the target at super-liminal speed
+    // Sensors:
+        // Gravitational Field Detector - Detects gravitational fields
+        // Warp Detector - Detects disruptions in spacetime
+        // Spectrometer - Used to analyze chemical and biological materials
+        // Navigation - Used to device the position of the ship and surrounding objects
+    // Computing Systems:
+        // Data Storage - Stores and retrieves data
+        // Main Computer - A central computer that controls the ships systems
+        // Specialized Computers - Hardware designed for specific purposes (may include biological or quantum components)
+        // Networking - A system that connects systems and ships together
+    // Transportation:
+        // Shuttle - A small craft that can transport crew and supplies between ships, and worlds
+        // Escape Pod - A small craft that can transport crew and supplies to a safe location
+        // Shuttle Bay - A deck that contains shuttles and escape pods
+        // Cargo Bay - A deck that holds cargo
+        // Docking Bay - A deck that can dock with ships, shuttles, and escape pods
+        // Cargo Elevator - Used to move cargo between decks
+        // Maintenance Elevator - Used to access areas that are not accessible to the crew
+        // Crew Elevator - Used to move crew between decks
+    // Crew Services:
+        // Crew Quarters - Crew members can sleep, eat, and rest here
+        // Crew Lounge - Crew members can relax here (Contains a bar and restaurant)
+        // Toilets - Guess what they are for
+// =============================================================================
+// Fleet Asset Files
+// =============================================================================
+// Name: Avaritia
+// Class: Military Command Ship
+// Crew Classes:
+    // Bridge Officer
+    // Military Officer
+    // Security Officer
+    // Logistics Officer
+    // Science Officer
+    // Engineering Officer
+    // Medical Officer
+    // Service Officer
+// Departments:
+    // Bridge (Control the ship and command the crew)
+    // Military (Prepare the ship and crew for battle)
+    // Security (Prevent threats and protect the ship and crew)
+    // Logistics (Manages materials as well as looking after the management of the ship and crew)
+    // Science (Conduct research, experiments and work on new technologies)
+    // Engineering (Maintain, repair, and upgrade ship systems)
+    // Medical (Conduct medical care and work on new technologies)
+    // Services (Responsible for cleaning, food, entertainment, and other services)
+// =============================================================================
+// Name: Novictus
+// Class: Civilian Cruiser
+// Crew Classes:
+    // Bridge Officer
+    // Security Officer
+    // Logistics Officer
+    // Science Officer
+    // Engineering Officer
+    // Medical Officer
+    // Service Officer
+// Departments:
+    // Bridge (Control the ship and command the crew)
+    // Security (Prevent threats and protect the ship and crew)
+    // Logistics (Manages materials as well as looking after the management of the ship and crew)
+    // Science (Conduct research, experiments and work on new technologies)
+    // Engineering (Maintain, repair, and upgrade ship systems)
+    // Medical (Conduct medical care and work on new technologies)
+    // Services (Responsible for cleaning, food, entertainment, and other services)
+// =============================================================================
+// Name: Discivolo
+// Class: Research Vessel
+// Crew Classes:
+    // Bridge Officer
+    // Security Officer
+    // Logistics Officer
+    // Science Officer
+    // Engineering Officer
+    // Medical Officer
+    // Service Officer
+// Departments:
+    // Bridge (Control the ship and command the crew)
+    // Security (Prevent threats and protect the ship and crew)
+    // Logistics (Manages materials as well as looking after the management of the ship and crew)
+    // Science (Conduct research, experiments and work on new technologies)
+    // Engineering (Maintain, repair, and upgrade ship systems)
+    // Medical (Conduct medical care and work on new technologies)
+    // Services (Responsible for cleaning, food, entertainment, and other services)
+// =============================================================================
+// Name: Pelavita
+// Class: Crew Transport Ship
+// Crew Classes:
+    // Bridge Officer
+    // Security Officer
+    // Medical Officer
+    // Service Officer
+// Departments:
+    // Bridge (Control the ship and command the crew)
+    // Security (Prevent threats and protect the ship and crew)
+    // Medical (Conduct medical care and work on new technologies)
+    // Services (Responsible for cleaning, food, entertainment, and other services)
+// =============================================================================
+// Planet Asset Files
+// =============================================================================
+// Name: Kalor III
+// System: Kalor
+// Class: K-Type
+// Socio-Economic Status: Poor Mining Colony
+// Planet Composition:
+    // 31% - Platinum-group Metals
+    // 26% - Iron
+    // 15% - Oxygen
+    // 7.5% - Silicon
+    // 7% - Magnesium
+    // 8% - Carbon
+    // 1% - Water
+    // 4.5% - Other
+// Atmosphere Composition:
+    // 63% - Sulphur Dioxide
+    // 18% - Nitrogen
+    // 3% - Oxygen
+    // 6% - Carbon Dioxide
+    // 0.5% - Water
+    // 9.5% - Other
+// =============================================================================
+// Name: Sotalis
+// System: N/A
+// Class: L-Type
+// Socio-Economic Status: Middle-Class Residential Colony
+// Planet Composition:
+    // 31% - Iron
+    // 26% - Oxygen
+    // 15% - Silicon
+    // 7.5% - Magnesium
+    // 7% - Carbon
+    // 12% - Water
+    // 1.5% - Other
+// Atmosphere Composition:
+    // 63% - Nitrogen
+    // 18% - Oxygen
+    // 9% - Carbon Dioxide
+    // 1% - Water
+    // 9% - Other
+// =============================================================================
+// Name: Nayzar
+// System: N/A
+// Class: R-Type (Ex M-Type)
+// Socio-Economic Status: Very Poor Stranded Colony
+// Planet Composition:
+    // 40% - Water
+    // 60% - Other
+// Atmosphere Composition:
+    // 60% - Nitrogen
+    // 12% - Oxygen
+    // 17% - Carbon Dioxide
+    // 3% - Water
+    // 8% - Other
+
+    // Dynamic Pokemon Style Battle with better AI and player control
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var app = new Vue({
+//     el: '#app',
+//     data: { // Using Placeholder Values
+//        userCharSrc: "http://guidesmedia.ign.com/guides/059687/images/blackwhite/pokemans_006.gif",
+//        opponentCharSrc: "http://pre01.deviantart.net/959a/th/pre/f/2016/075/4/6/095_onix_by_rayo123000-d9vbjj3.png",
+//        userTeam: [
+//            {
+//               name: "Cerebrum",
+//               health: 1,
+//               maxHealth: 1,
+//               healthRegen: 0,
+//               stats: { // How succeptible the pokemon is to certain types of attacks
+//                   electric: [0, 1], // Chance of dodging, how much damage they take
+//                   fire: [0, 1],
+//                   mental: [1, 0],
+//                   physical: [0.25, 0.75], // Has a 25% chance of dodging, and will take 75% of the damage
+//                   poison: [0, 1],
+//                   projectile: [0.1, 1]
+//               },
+//               moves: [
+//                   {
+//                       name: "Brain Freeze",
+//                       desc: "Freezes the opponent for 1 turn",
+//                       health: 0, // The health of the weapon/move, null if it can't be destroyed
+//                       recharge: 3, // The amount of turns it takes to recharge
+//                       charge: 0, // The amount of turns it takes before you can first use the move
+//                       effects: [ // The effects the move has on the target
+//                           {
+//                               name: "Access Brain", // The name of the effect
+//                               type: "mental", // The type of effect
+//                               strength: 0.5, // How strong the effect will be
+//                               effectiveness: 0.5, // How likely it is that the effect will be applied
+//                               duration: 1 // How many turns the effect will last
+//                           },
+//                           {
+//                               name: "Freeze Brain",
+//                               type: "special", // Special effects run custom code
+//                           }
+//                       ]
+//                   }
+//               ],
+//               items: []
+//           },
+//       ],
+//        userChar: "Cerebrum",
+//        opponentChar: "Placeholder",
+//        userAlive: true,
+//        opponentAlive: true,
+//        opponentFill: 100,
+//        userFill: 100,
+//        userHP: 100,
+//        startUserHP: 100,
+//        opponentHP: 100,
+//        userLevel: 50,
+//        opponentLevel: 50,
+//        battleText: "What will Cerebrum do?",
+//        battleOptions: ["Fight", "Team", "Item", "Run"],
+//        userAttackDamage: [15,40,50,25],
+//        opponentAttacks: ["Tackle", "Iron Tail", "Rock Slide", "Slam"],
+//        opponentAttackDamage: [15,40,50,25],
+//        fightOptions: ["Scratch", "Fly", "Flamethrower", "Ember"],
+//        endOptions: ["Yes", "No"],
+//        fightOn: false,
+//        optionsOn: true,
+//        endOn: false,
+//     userHpBar: {
+//       width: "100%"
+//     },
+//     opponentHpBar: {
+//       width: "100%"
+//     }
+//    },
+//     methods:{
+//       processOption: function(option){
+//         switch(option){
+//           case 1:
+//             //handle fight
+//             this.optionsOn = false
+//             this.fightOn = true
+//           break;
+//           case 2:
+//             //handle team
+//             setTimeout(() => {
+//             this.battleText = "What will " + this.userChar + " do?"
+//         }, 2000);
+            
+//             this.battleText = "You're our only hope " + this.userChar + "!"
+            
+//           break;
+//           case 3:
+//             //handle item
+//             setTimeout(() => {
+//             this.battleText = "What will " + this.userChar + " do?"
+//         }, 2000);
+//             this.battleText = "No items in bag."
+//           break;
+//           case 4:
+//             //handle run
+//             setTimeout(() => {
+//             this.battleText = "What will " + this.userChar + " do?"
+//         }, 2000);
+//             this.battleText = "Can't escape."
+//           break;
+//         }
+//       },
+//       processAttack: function(attack){
+//         switch(attack){
+//           case 1:
+//             //handle scratch
+//             this.opponentHP -= this.userAttackDamage[attack-1]
+//             //edit if HP !== 0
+//             this.opponentFill -= (this.userAttackDamage[attack-1])
+//             if(this.opponentFill <= 0){
+//               this.opponentHpBar.width = "0%"
+//             } else{
+//               this.opponentHpBar.width = this.opponentFill + "%"
+//             }   
+//             if(this.checkOpponentHp()){
+//               this.battleText = this.opponentChar + " fainted! Play again?"
+//               this.processFaint(1)
+//             } else if(this.checkOpponentHp() === false) {
+              
+//                 setTimeout(() => {
+//                 this.processOpponentAttack()
+//                 }, 2000);
+            
+//               this.battleText = this.userChar + " used " + this.fightOptions[attack-1] + "!"
+//               //call opponent attack function
+//             setTimeout(() => { 
+//               if(this.userAlive){
+//                 setTimeout(() => {this.battleText = "What will " + this.userChar + " do?"
+//                 }, 2000);
+//               }
+//              }, 2000);
+//             }
+//           break;
+//           case 2:
+//             //handle fly
+//              this.opponentHP -= this.userAttackDamage[attack-1]
+//              //edit if HP !== 0
+//             this.opponentFill -= (this.userAttackDamage[attack-1])
+//             if(this.opponentFill <= 0){
+//               this.opponentHpBar.width = "0%"
+//             } else{
+//               this.opponentHpBar.width = this.opponentFill + "%"
+//             }
+//               if(this.checkOpponentHp()){
+//               this.battleText = this.opponentChar + " fainted! Play again?"
+//               this.processFaint(1)
+//             } else if(this.checkOpponentHp() === false) {
+              
+//                 setTimeout(() => {
+//                 this.processOpponentAttack()
+//                 }, 2000);
+            
+//               this.battleText = this.userChar + " used " + this.fightOptions[attack-1] + "!"
+//               //call opponent attack function
+//             setTimeout(() => { 
+//               if(this.userAlive){
+//                 setTimeout(() => {this.battleText = "What will " + this.userChar + " do?"
+//                 }, 2000);
+//               }
+//              }, 2000);
+//             }
+//           break;
+//           case 3:
+//             //handle flamethrower
+//              this.opponentHP -= this.userAttackDamage[attack-1]
+//              //edit if HP !== 0
+//             this.opponentFill -= (this.userAttackDamage[attack-1])
+//             if(this.opponentFill <= 0){
+//               this.opponentHpBar.width = "0%"
+//             } else{
+//               this.opponentHpBar.width = this.opponentFill + "%"
+//             }
+//               if(this.checkOpponentHp()){
+//               this.battleText = this.opponentChar + " fainted! Play again?"
+//               this.processFaint(1)
+//             } else if(this.checkOpponentHp() === false) {
+              
+//                 setTimeout(() => {
+//                 this.processOpponentAttack()
+//                 }, 2000);
+            
+//               this.battleText = this.userChar + " used " + this.fightOptions[attack-1] + "!"
+//               //call opponent attack function
+//             setTimeout(() => { 
+//               if(this.userAlive){
+//                 setTimeout(() => {this.battleText = "What will " + this.userChar + " do?"
+//                 }, 2000);
+//               }
+//              }, 2000);
+//             }
+//           break;
+//           case 4:
+//             //handle ember
+//              this.opponentHP -= this.userAttackDamage[attack-1]
+//              //edit if HP !== 0
+//             this.opponentFill -= (this.userAttackDamage[attack-1])
+//             if(this.opponentFill <= 0){
+//               this.opponentHpBar.width = "0%"
+//             } else{
+//               this.opponentHpBar.width = this.opponentFill + "%"
+//             }
+//             if(this.checkOpponentHp()){
+//               this.battleText = this.opponentChar + " fainted! Play again?"
+//               this.processFaint(1)
+//             } else if(this.checkOpponentHp() === false) {
+              
+//                 setTimeout(() => {
+//                 this.processOpponentAttack()
+//                 }, 2000);
+            
+//               this.battleText = this.userChar + " used " + this.fightOptions[attack-1] + "!"
+//               //call opponent attack function
+//             setTimeout(() => { 
+//               if(this.userAlive){
+//                 setTimeout(() => {this.battleText = "What will " + this.userChar + " do?"
+//                 }, 2000);
+//               }
+//              }, 2000);
+//             }
+//           break;
+//         }
+//       },
+//       checkOpponentHp: function(){
+//         if(this.opponentHP <= 0){
+//           //fainted
+//           return true
+          
+//         } else{
+//           //battle continues
+//           return false
+//         }
+//       },
+//       processFaint: function(char){
+//         this.fightOn = false
+//         this.endOn = true;
+//         if(char === 1){
+//           this.opponentAlive = false
+//         } else {
+//           this.userHP = 0
+//           this.userAlive = false
+//         }
+//       },
+//       processOpponentAttack: function(){
+//         //generate random number
+//         var random = Math.floor((Math.random() * 4) + 1)
+//         //do damage to user
+//         this.userHP -=  this.opponentAttackDamage[random-1]
+//         this.userFill -= (this.opponentAttackDamage[random-1])
+//         if(this.userFill <= 0){
+//           this.userHpBar.width = "0%"
+//         } else{
+//           this.userHpBar.width = this.userFill + "%"
+//         } 
+//          if(this.checkUserHp()){
+//            //add battle text
+//            this.battleText = this.userChar + " fainted! Play again?"
+//            this.processFaint(2)
+//          } else if(this.checkOpponentHp() === false) {  
+//            //continue battle
+//            this.battleText = this.opponentChar + " used " + this.opponentAttacks[random-1]  + "!"
+//            this.fightOn = false
+//            this.optionsOn = true
+//          }
+//       },
+//       checkUserHp: function(){
+//          if(this.userHP <= 0){
+//           //fainted
+//           return true
+          
+//         } else{
+//           //battle continues
+//           return false
+//         }
+//       },
+//       resetBattle: function(){
+//         //reset data to start new game
+//         this.endOn = false;
+//         this.fightOn = false;
+//         this.optionsOn = true;
+//         this.battleText = "What will Charizard do?"
+//         this.userAlive = true
+//         this.opponentAlive = true
+//         this.userHP = 100
+//         this.opponentHP = 100
+//         this.userFill = 100
+//         this.opponentFill = 100
+//         this.userHpBar.width = "100%"
+//         this.opponentHpBar.width = "100%"
+//       }
+//     }
+//   })
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // Schematics for a turn-based superhero game based on pokemon battle system
+  // =============================================================================
+  //
+  // =========================== Character  Schematics ===========================
+  
+  var Cerebrum = { // An example of a character
+      name: "Cerebrum", // The name of the character
+      desc: "A powerful cerebral superhero who is an ex-member of the Romano Mob.", // A description of the character
+      health: 1, // The starting health of the character
+      maxHealth: 1, // The maximum health of the character
+      healthRegen: 0, // The amount of health the character regenerates (on average) per turn
+      stats: { // How succeptible the character is to certain types of attacks
+          electric: {
+              dodge: 0, // The percentage chance of dodging an attack of that type
+              dodgeVar: 0, // The variance of the dodge chance
+              absorb: 1, // The percentage of damage absorbed from an attack of that type
+              absorbVar: 0 // The variance of the absorb chance
+          },
+          fire: {
+              dodge: 0,
+              dodgeVar: 0,
+              absorb: 1,
+              absorbVar: 0
+          },
+          mental: {
+              dodge: 1,
+              dodgeVar: 0,
+              absorb: 0,
+              absorbVar: 0
+          },
+          physical: {
+              dodge: 0.25,
+              dodgeVar: 0.05,
+              absorb: 0.75,
+              absorbVar: 0.05
+          },
+          poison: {
+              dodge: 0,
+              dodgeVar: 0,
+              absorb: 1,
+              absorbVar: 0
+          },
+          projectile: {
+              dodge: 0.1,
+              dodgeVar: 0.05,
+              absorb: 1,
+              absorbVar: 0
+          }
+      },
+      moves: [ // The moves the character can perform (both offensive and defensive)
+          {
+              name: "Brain Freeze", // The name of the move
+              desc: "Freezes the target for 1 turn", // The description of the whole move
+              recharge: 3, // The amount of turns it takes to recharge
+              charge: 0, // The current charge of the move (0 = ready to use)
+              target: ["enemy"], // The possible targets of the move (self, enemy, ally, enemy team, ally team, all)
+              effects: [ // The effects the move has on the target
+                  {
+                      name: "Access Brain", // The name of the effect
+                      type: "mental", // The type of effect (mental, physical, electric, fire, poison, projectile, special)
+                      stat: null, // The stat the effect affects, null if it doesn't affect a stat
+                      duration: 0, // How many turns the effect will last (damage is dealt every turn)
+                      strength: 0, // How strong the effect will be (positive to deal damage, negative to heal and neutral to do nothing)
+                      strengthRange: 0, // The range for randomizing the strength of the effect (e.g. if strength is 0.5 and strengthRange is 0.1, the effect strength will be between 0.4 and 0.6)
+                      effectiveness: 0.5, // How likely it is that the effect will be applied (1 is always, 0 is never)
+                      effectivenessRange: 0 // The range for randomizing the effectiveness of the effect (e.g. if effectiveness is 0.5 and effectivenessRange is 0.1, the effect effectiveness will be between 0.4 and 0.6)
+                  },
+                  {
+                      name: "Freeze Brain",
+                      type: "special", // Special effects run custom code
+                      duration: 1,
+                      strength: 0,
+                      strengthRange: 0,
+                      effectiveness: 0.5,
+                      effectivenessRange: 0
+                  }
+              ]
+          },
+          {
+              name: "Think Fast",
+              desc: "Increases the speed of a character's brain, allowing them to dodge attacks faster for 3 turns",
+              recharge: 10,
+              charge: 0,
+              target: ["self", "ally"],
+              effects: [
+                  {
+                      name: "Access Brain",
+                      type: "mental",
+                      stat: null,
+                      duration: 0,
+                      strength: 0,
+                      strengthRange: 0,
+                      effectiveness: 1,
+                      effectivenessRange: 0
+                  },
+                  {
+                      name: "Increase Dodging",
+                      type: "special",
+                      stat: "dodge",
+                      duration: 3,
+                      strength: 0.3,
+                      strengthRange: 0.15,
+                      effectiveness: 1,
+                      effectivenessRange: 0
+                  }
+              ]
+          },
+          {
+              name: "Mind Control",
+              desc: "Controls the target's brain, allowing you to use one of their moves",
+              recharge: 10,
+              charge: 3,
+              target: ["enemy"],
+              effects: [
+                  {
+                      name: "Access Brain",
+                      type: "mental",
+                      stat: null,
+                      duration: 0,
+                      strength: 0,
+                      strengthRange: 0,
+                      effectiveness: 1,
+                      effectivenessRange: 0
+                  },
+                  {
+                      name: "Control Brain",
+                      type: "special",
+                      stat: null,
+                      duration: 1,
+                      strength: 0,
+                      strengthRange: 0,
+                      effectiveness: 1,
+                      effectivenessRange: 0
+                  }
+              ]
+          },
+          {
+              name: "Punch",
+              desc: "A basic punch",
+              recharge: 0,
+              charge: 0,
+              target: ["enemy"],
+              effects: [
+                  {
+                      name: "Punch Target",
+                      type: "physical",
+                      stat: "health",
+                      duration: 1,
+                      strength: -0.05,
+                      strengthRange: 0.05,
+                      effectiveness: 0.8,
+                      effectivenessRange: 0.05
+                  }
+              ]
+          },
+          {
+              name: "Kick",
+              desc: "A basic kick",
+              recharge: 1,
+              charge: 0,
+              target: ["enemy"],
+              effects: [
+                  {
+                      name: "Kick Target",
+                      type: "physical",
+                      stat: "health",
+                      duration: 1,
+                      strength: -0.075,
+                      strengthRange: 0.025,
+                      effectiveness: 0.85,
+                      effectivenessRange: 0.05
+                  }
+              ]
+          }
+      ],
+      items: [
+          {
+              name: "Baton",
+              desc: "A basic baton",
+              health: 1, // How much damage the item can deal before it breaks
+              moves: [ // The moves the item can perform
+                  {
+                      name: "Hit",
+                      desc: "Hit a target with a baton",
+                      recharge: 0,
+                      charge: 0,
+                      target: ["enemy"],
+                      effects: [
+                          {
+                              name: "Hit Target",
+                              type: "physical",
+                              stat: "health",
+                              duration: 1,
+                              strength: -0.2,
+                              strengthRange: 0.05,
+                              effectiveness: 0.8,
+                              effectivenessRange: 0.05
+                          }
+                        ]
+                  }
+                ],
+                effects: []
+          },
+      ],
+      effects: []
+  }
+
+  var Volantis = { // Another example of a character
+      name: "Volantis",
+      desc: "A very powerful supervillain with the power to create various forms of energy",
+      health: 2,
+      maxHealth: 5,
+      healthRegen: 0.01,
+      stats: {
+        electric: {
+            dodge: 0.25,
+            dodgeVar: 0.5,
+            absorb: 0,
+            absorbVar: 0
+        },
+        fire: {
+            dodge: 0,
+            dodgeVar: 0,
+            absorb: 0.5,
+            absorbVar: 0.05
+        },
+        mental: {
+            dodge: 0.5,
+            dodgeVar: 0.05,
+            absorb: 0,
+            absorbVar: 0
+        },
+        physical: {
+            dodge: 0.5,
+            dodgeVar: 0.05,
+            absorb: 0.5,
+            absorbVar: 0.05
+        },
+        poison: {
+            dodge: 0.1,
+            dodgeVar: 0.05,
+            absorb: 0.5,
+            absorbVar: 0.05
+        },
+        projectile: {
+            dodge: 0.25,
+            dodgeVar: 0.05,
+            absorb: 0.5,
+            absorbVar: 0.05
+        }
+      },
+      moves: [
+          {
+              name: "Plasma Ball",
+              desc: "Shoots a plasma ball",
+              recharge: 3,
+              charge: 0,
+              target: ["enemy"],
+              effects: [
+                  {
+                      name: "Throw Ball",
+                      type: "projectile",
+                      stat: null,
+                      duration: 0,
+                      strength: 0,
+                      strengthRange: 0,
+                      effectiveness: 0.8,
+                      effectivenessRange: 0.05
+                  },
+                  {
+                      name: "Plasma Electricity Damage",
+                      type: "electric",
+                      stat: "health",
+                      duration: 1,
+                      strength: -0.1,
+                      strengthRange: 0.05,
+                      effectiveness: 0.8,
+                      effectivenessRange: 0.05
+                  },
+                  {
+                      name: "Plasma Fire Damage",
+                      type: "fire",
+                      stat: "health",
+                      duration: 1,
+                      strength: -0.1,
+                      strengthRange: 0.05,
+                      effectiveness: 0.8,
+                      effectivenessRange: 0.05
+                  }
+              ]
+          },
+          {
+              name: "Laser Beam",
+              desc: "Shoots a laser beam",
+              recharge: 3,
+              charge: 0,
+              target: ["enemy", "enemy team"],
+              effects: [
+                  {
+                      name: "Laser Beam",
+                      type: "electric",
+                      stat: "health",
+                      duration: 1,
+                      strength: -0.3,
+                      strengthRange: 0.1,
+                      effectiveness: 0.9,
+                      effectivenessRange: 0.05
+                  },
+                  {
+                      name: "Fire",
+                      type: "fire",
+                      stat: "health",
+                      duration: 1,
+                      strength: -0.01,
+                      strengthRange: 0.05,
+                      effectiveness: 1,
+                      effectivenessRange: 0
+                  }
+              ]
+          }
+      ],
+      items: [],
+      effects: []
+}
+
+var Data = {
+    name: "Data",
+    desc: "An android created by Dr. Noonian Soong, he is a crew member of the USS Enterprise",
+    health: 10,
+    maxHealth: 10,
+    healthRegen: 0.01,
+    stats: {
+        electric: {
+            dodge: 0.25,
+            dodgeVar: 0.05,
+            absorb: 0.2,
+            absorbVar: 0.05
+        },
+        fire: {
+            dodge: 0.5,
+            dodgeVar: 0.05,
+            absorb: 0.2,
+            absorbVar: 0.05
+        },
+        mental: {
+            dodge: 1,
+            dodgeVar: 0,
+            absorb: 0,
+            absorbVar: 0
+        },
+        physical: {
+            dodge: 0.9,
+            dodgeVar: 0.05,
+            absorb: 0.1,
+            absorbVar: 0.05
+        },
+        poison: {
+            dodge: 1,
+            dodgeVar: 0,
+            absorb: 0,
+            absorbVar: 0
+        },
+        projectile: {
+            dodge: 0.5,
+            dodgeVar: 0.05,
+            absorb: 0.1,
+            absorbVar: 0.05
+        }
+    },
+    moves: [
+        {
+            name: "Punch",
+            desc: "A basic punch",
+            recharge: 0,
+            charge: 0,
+            target: ["enemy"],
+            effects: [
+                {
+                    name: "Punch Target",
+                    type: "physical",
+                    stat: "health",
+                    duration: 1,
+                    strength: -0.3,
+                    strengthRange: 0.1,
+                    effectiveness: 0.95,
+                    effectivenessRange: 0.05
+                }
+            ]
+        }
+    ],
+    items: [
+        {
+            name: "Phaser",
+            desc: "A laser weapon with multiple settings",
+            health: 0,
+            moves: [ // The moves the item can perform
+                {
+                    name: "Phaser Set to Stun",
+                    desc: "Stuns the target",
+                    recharge: 0,
+                    charge: 0,
+                    target: ["enemy"],
+                    effects: [
+                        {
+                            name: "Hit Target",
+                            type: "electric",
+                            stat: "health",
+                            duration: 1,
+                            strength: -0.1,
+                            strengthRange: 0.05,
+                            effectiveness: 0.8,
+                            effectivenessRange: 0.05
+                        },
+                        {
+                            name: "Stun Target",
+                            type: "special",
+                            stat: null,
+                            duration: 1,
+                            strength: 0,
+                            strengthRange: 0,
+                            effectiveness: 1,
+                            effectivenessRange: 0
+                        }
+                    ]
+                },
+                {
+                    name: "Phaser Set to Kill",
+                    desc: "Kills the target",
+                    recharge: 5,
+                    charge: 10,
+                    target: ["enemy"],
+                    effects: [
+                        {
+                            name: "Hit Target",
+                            type: "electric",
+                            stat: "health",
+                            duration: 1,
+                            strength: -1,
+                            strengthRange: 0.5,
+                            effectiveness: 0.5,
+                            effectivenessRange: 0.05
+                        }
+                    ]
+                }
+            ],
+            effects: []
+        }
+    ],
+    effects: []
+}
+
+var player_team = [
+    Cerebrum,
+    Data
+];
+
+var enemy_team = [
+    Volantis
+];
+
+// GAME LOOP PLAN
+// X. Player selects a move and target
+// X. A message is logged stating the move and target
+// X. The effects of the move are looped through
+//    X. Check if the effect misses the target
+//       X. If it misses, a message is logged that the effect missed, the loop stops
+//    X. Check if the effect is dodged by the target
+//       X. If it is dodged, a message is logged that the effect was dodged, the loop stops
+//    X. Calculate the strength of the effect and apply it to the target
+//       X. If the target is killed, a message is logged that the target was killed, the loop stops
+//       X. If the target is not killed, a message is logged that the effect was applied, the loop continues
+// X. The recharge of the move is reset
+
+function randRange(range) {
+  return Math.random() * range * 2 - range;
+}
+
+// Function that randomly returns true or false based on a decimal given (e.g 0.5 = has a 50% chance of returning true)
+function randChance(chance) {
+  return Math.random() < chance;
+}
+
+function decimalToPercent(decimal) {
+  return Math.round(decimal * 100) + "%";
+}
+
+function addToLog(text) {
+  $("#log").append("<p>" + text + "</p>");
+}
+
+function applyEffect(effect, user, target){
+  // First calculates if the user misses the target
+
+  var hitChance = effect.effectiveness + randRange(effect.effectivenessRange); // Calculates the chance that the user would hit the target
+  var dodgeChance = target.stats[effect.type].dodge + randRange(target.stats[effect.type].dodgeVar); // Calculates the chance that the target would dodge the user's attack
+
+  if(!randChance(hitChance)) { // If the user misses the target
+    addToLog("... but " + user.name + " missed!");
+    return false;
+  }
+  else if(!randChance(dodgeChance)) { // If the target dodges/resists the attack
+    addToLog("... but " + target.name + " dodged!");
+    return false;
+  }
+
+  // Calculates the strength of the effect and applies it to the target
+
+  var strength = effect.strength + randRange(effect.strengthRange); // Calculates the strength of the effect
+  var strengthAbsorbed = target.stats[effect.type].absorb + randRange(target.stats[effect.type].absorbVar); // Calculates the amount of the effect that is absorbed by the target
+
+  strength -= strengthAbsorbed; // Subtracts the amount of the effect that is absorbed from the strength of the effect
+
+  // Applies the effect to the target
+
+  if(effect.stat == "health") {
+    // Cases for if the effect is positive or negative
+    if(strength > 0) {
+      target.health += strength;
+      if(target.health > target.maxHealth) {
+        target.health = target.maxHealth;
+        addToLog("... and " + target.name + " was fully healed!");
+      }
+      else {
+        addToLog("... and " + target.name + " gained " + decimalToPercent(strength) + " health!");
+      }
+    }
+    else if (strength < 0) {
+      target.health += strength;
+      if(target.health < 0) {
+        target.health = 0;
+        addToLog("... and " + target.name + " was killed!");
+      }
+      else {
+        addToLog("... and " + target.name + " lost " + decimalToPercent(strength) + " health!");
+      }
+    }
+    else {
+      addToLog("... but it had no effect!");
+    }
+  }
+  else{
+    change = (strength > 0) ? "increased" : "decreased";
+    if (strength !== 0) {
+      // Add the effect (stat, strength and charge) to the target's effects
+      target.effects.push({
+        name: effect.name,
+        stat: effect.stat,
+        strength: strength,
+        charge: effect.charge
+      });
+
+      addToLog("... and " + target.name + "'s ability to " + effect.stat[1] + " " + effect.stat[0] + " damage will be " + change + " by " + decimalToPercent(strength) + " for the next " + effect.charge + " turns!");
+    }
+    else {
+      addToLog("... but it had no effect!");
+    }
+  }
+
+  return true; // Returns true if the effect was successful
+}
+
+function useMove(move, user, target) {
+  var applied = false; // Whether the move was applied or not
+
+  addToLog(user.name + " tries " + move.name + " on " + target.name + "...");
+
+  // Loop through all the effects of the move
+  for (var i = 0; i < move.effects.length; i++) {
+    // Apply the effects to the target
+    applied = applyEffect(move.effects[i], user, target);
+    if (!applied) break; // If the effect was not applied, break out of the loop
+  }
+  
+  move.charge = move.recharge;
+}
+
+function randomisedTurn(player_team, target_team) {
+  preBattle(player_team);
+
+  // Pick a random player (with health remaining)
+  var selection = player_team.filter(e => e.health > 0)
+  var player = selection[Math.floor(Math.random() * selection.length)];
+
+  // Pick a random move (with a charge remaining and only target's enemies) including any moves under their items
+  var selection = player.moves.concat(player.items.map(i => i.moves)).filter(m => m.charge > 0 && m.target.includes("enemy"));
+  var move = selection[Math.floor(Math.random() * selection.length)];
+
+  // Pick a random target (with health remaining)
+  var selection = target_team.filter(e => e.health > 0);
+  var target = selection[Math.floor(Math.random() * selection.length)];
+
+  useMove(move, player, target);
+}
+
+function preBattle(team) {
+  team.forEach(member => {
+    // Calculate the regen factor for the character (using effects)
+    var regenFactor = member.healthRegen + member.effects.reduce((acc, cur) => {
+      if (cur.stat == ["health", "regen"]) {
+        return acc + cur.strength;
+      }
+    }, 0);
+
+    // Apply the regen if positive
+    if (regenFactor > 0) {
+      member.health += regenFactor;
+      if (member.health > member.maxHealth) {
+        member.health = member.maxHealth;
+        addToLog(member.name + " regained full health!");
+      }
+      else {
+        addToLog(member.name + " regenerated " + decimalToPercent(regenFactor) + " health!");
+      }
+    }
+
+    // Loop through all the effects of the character
+    member.effects.forEach(effect => {
+      // Apply the effects that change health
+      if (effect.stat == "health") {
+        member.health += effect.strength;
+        if (effect.strength > 0) {
+          if (member.health > member.maxHealth) {
+            member.health = member.maxHealth;
+            addToLog(member.name + " was fully healed!");
+          }
+          else {
+            addToLog(member.name + " gained " + decimalToPercent(effect.strength) + " health!");
+          }
+        }
+        else if (effect.strength < 0) {
+          if (member.health < 0) {
+            member.health = 0;
+            addToLog(member.name + " was killed!");
+          }
+          else {
+            addToLog(member.name + " lost " + decimalToPercent(effect.strength) + " health!");
+          }
+        }
+      }
+
+      // Change the charge of the effect, and remove the effect if it is finished
+      effect.charge--;
+      if (effect.charge <= 0) {
+        addToLog(member.name + "'s " + effect.name + " effect has finished!");
+        member.effects.splice(member.effects.indexOf(effect), 1);
+      }
+    })
+
+    // Loop through all the moves of the character (moves and the moves of their items)
+    var moves = member.moves.concat(member.items.map(item => item.moves));
+    moves.forEach(move => {
+      // Change the charge of the move if it's not 0
+      move.charge -= (move.charge > 0) ? 1 : 0;
+    })
+  })
+}
+
+function AITurn (player_team, target_team, level) {
+  // Level is how strong the AI is
+
+  switch (level) {
+    case 0: // Level 0 - Randomised turn
+      randomisedTurn(player_team, target_team);
+      break;
+    case 1: // Level 1 - Attacks the weakest enemy (with a random move)
+      randomisedTurnWeak(player_team, target_team);
+      break;
+    case 2: // Level 2 - Attacks the weakest enemy (with an optimal move)
+      optimisedTurnWeak(player_team, target_team);
+      break;
+    case 3: // Level 3 - Attacks the strongest enemy (with a random move)
+      randomisedTurnStrong(player_team, target_team);
+      break;
+    case 4: // Level 4 - Attacks the strongest enemy (with an optimal move)
+      optimisedTurnStrong(player_team, target_team);
+      break;
+    case 5: // Level 5 - Attacks using a combination of target and move to cause the most damage
+      optimisedTurnDamage(player_team, target_team);
+      break;
+    case 6: // Level 6 - Uses a combination of the tactics from level 4 and 5
+      optimisedTurnImpact(player_team, target_team);
+      break;
+    case 7: // Level 7 - Attacks by learning from the enemy's moves
+      optimisedTurnLearning(player_team, target_team);
+      break;
+    case 8: // Level 8 - Uses a combination of the tactics from level 6 and 7
+      fullAITurn(player_team, target_team);
+      break;
+  }
+}
+
+function randomisedTurnWeak(player_team, target_team) {
+  preBattle(player_team);
+
+  // Pick a random player (with health remaining)
+  var selection = player_team.filter(e => e.health > 0)
+  var player = selection[Math.floor(Math.random() * selection.length)];
+
+  // Pick a random move (with a charge remaining and only target's enemies) including any moves under their items
+  var selection = player.moves.concat(player.items.map(i => i.moves)).filter(m => m.charge > 0 && m.target.includes("enemy"));
+  var move = selection[Math.floor(Math.random() * selection.length)];
+
+  // Pick a target (with the lowest health remaining)
+  var selection = target_team.filter(e => e.health > 0);
+  var target = selection.reduce((a, b) => a.health < b.health ? a : b);
+
+  useMove(move, player, target);
+}
+
+function optimisedTurnWeak(player_team, target_team) {
+  preBattle(player_team);
+
+  // Pick a target (with the lowest health remaining)
+  var selection = target_team.filter(e => e.health > 0);
+  var target = selection.reduce((a, b) => a.health < b.health ? a : b);
+
+  // Loop through all characters and moves to find the best move
+  var bestMove = null;
+  var bestCharacter = null;
+  var bestImpact = 0;
+
+  player_team.forEach(player => {
+    // Loop through all the moves of the character (moves and the moves of their items)
+    var moves = player.moves.concat(player.items.map(item => item.moves));
+    moves.forEach(move => {
+      if (move.charge == 0 || !move.target.includes("enemy")) return;
+
+      // Calculate the average impact of the move applied to the target (including the effectiveness of the move)
+      var impact = 0;
+
+      move.effects.forEach(effect => {
+        // average effectiveness * average damage (want to get the lowest value)
+        var effectiveness = effect.effectiveness - target.stats[effect.stat].dodge
+        var strength = effect.strength - target.stats[effect.stat].absorb
+        impact += effectiveness * strength;
+      });
+
+      if (impact < bestImpact) {
+        bestMove = move;
+        bestCharacter = player;
+        bestImpact = impact;
+      }
+    })
+  })
+
+  useMove(bestMove, bestCharacter, target);
+}
+
+function optimisedTurnStrong(player_team, target_team) {
+  preBattle(player_team);
+
+  // Pick a target (with the most health remaining)
+  var selection = target_team.filter(e => e.health > 0);
+  var target = selection.reduce((a, b) => a.health > b.health ? a : b);
+
+  // Loop through all characters and moves to find the best move
+  var bestMove = null;
+  var bestCharacter = null;
+  var bestImpact = 0;
+
+  player_team.forEach(player => {
+    // Loop through all the moves of the character (moves and the moves of their items)
+    var moves = player.moves.concat(player.items.map(item => item.moves));
+    moves.forEach(move => {
+      if (move.charge == 0 || !move.target.includes("enemy")) return;
+
+      // Calculate the average impact of the move applied to the target (including the effectiveness of the move)
+      var impact = 0;
+
+      move.effects.forEach(effect => {
+        // average effectiveness * average damage (want to get the lowest value)
+        var effectiveness = effect.effectiveness - target.stats[effect.stat].dodge
+        var strength = effect.strength - target.stats[effect.stat].absorb
+        impact += effectiveness * strength;
+      });
+
+      if (impact < bestImpact) {
+        bestMove = move;
+        bestCharacter = player;
+        bestImpact = impact;
+      }
+    })
+  })
+
+  useMove(bestMove, bestCharacter, target);
+}
+
+function optimisedTurnImpact(player_team, target_team) {
+  preBattle(player_team);
+
+  // Loop through all targets, characters and moves to find the best move
+  var bestMove = null;
+  var bestCharacter = null;
+  var bestTarget = null;
+  var bestImpact = 0;
+
+  target_team.forEach(target => {
+    player_team.forEach(player => {
+      // Loop through all the moves of the character (moves and the moves of their items)
+      var moves = player.moves.concat(player.items.map(item => item.moves));
+      moves.forEach(move => {
+        if (move.charge == 0 || !move.target.includes("enemy")) return;
+
+        // Calculate the average impact of the move applied to the target (including the effectiveness of the move)
+        var impact = 0;
+
+        move.effects.forEach(effect => {
+          // average effectiveness * average damage (want to get the lowest value)
+          var effectiveness = effect.effectiveness - target.stats[effect.stat].dodge
+          var strength = effect.strength - target.stats[effect.stat].absorb
+          impact += effectiveness * strength;
+        });
+        
+        if (impact < bestImpact) {
+          bestMove = move;
+          bestCharacter = player;
+          bestTarget = target;
+          bestImpact = impact;
+        }
+      }
+    )})
+  })
+}
+
+function playerTurn (player_team, target_team) {
+  preBattle(player_team);
+
+  // Allow the player to choose an alive character
+  var selection = player_team.filter(e => e.health > 0);
+  var player = selection[Math.floor(Math.random() * selection.length)];
+
+  // Allow the player to choose a move with a charge remaining
+  var selection = player.moves.concat(player.items.map(i => i.moves)).filter(m => m.charge > 0);
+
+  var move = selection[Math.floor(Math.random() * selection.length)]; // WILL EVENTUALLY BE PLAYER CONTROLLED
+
+  // Allow the player to choose a target depending on the move's potential targets
+  var selection = []
+  if (move.target.includes("ally")) selection = selection.concat(player_team.filter(e => e.health > 0 && e != player));
+
+  if (move.target.includes("enemy")) selection = selection.concat(target_team.filter(e => e.health > 0));
+
+  if (move.target.includes("self")) selection.push(player);
+
+  if (move.target.includes("ally team")) selection.push(player_team.filter(e => e.health > 0));
+
+  if (move.target.includes("enemy team")) selection.push(target_team.filter(e => e.health > 0));
+
+  if (move.target.includes("all")) selection.push(player_team.filter(e => e.health > 0).concat(target_team.filter(e => e.health > 0)))
+  
+  var target = selection[Math.floor(Math.random() * selection.length)]; // WILL EVENTUALLY BE PLAYER CONTROLLED
+  
+  useMove(move, player, target);
+}
+
+function gameLoop (player_team, target_team) {
+  // Loop until one team is dead
+  while (player_team.filter(e => e.health > 0).length > 0 && target_team.filter(e => e.health > 0).length > 0) {
+    playerTurn(player_team, target_team);
+    enemyTurn(player_team, target_team);
+  }
+  // Display a message stating who won
+  if (player_team.filter(e => e.health > 0).length > 0) {
+    console.log("You won!");
+  }
+  else {
+    console.log("You were defeated!");
+  }
+}
+
+function newGame() {
+  // Start by using the game's settings
+  // Turn type: One move per team, one move per character, or custom number of moves per turn
+  // Enemy: AI or player controlled
+  // AI (if applicable): Random, optimised, or custom
+  // Limit: Number of turns, or no limit
+  // Teams: Randomised, evenly matched, or customised
+  // Items: Randomised, customised or none
+}
+
+var app = new Vue({
+    el: '#app',
+    data: { // Using Placeholder Values
+       userCharSrc: "http://guidesmedia.ign.com/guides/059687/images/blackwhite/pokemans_006.gif",
+       opponentCharSrc: "http://pre01.deviantart.net/959a/th/pre/f/2016/075/4/6/095_onix_by_rayo123000-d9vbjj3.png",
+       userChar: Data,
+       opponentChar: Volantis,
+       userLevel: 50,
+       opponentLevel: 50,
+       battleText: "",
+       battleOptions: ["Fight", "Team", "Item", "Run"],
+       endOptions: ["Yes", "No"],
+       fightOn: false,
+       optionsOn: true,
+       endOn: false,
+    userHpBar: {
+      width: "100%"
+    },
+    opponentHpBar: {
+      width: "100%"
+    }
+   },
+    methods:{
+      processOption: function(option){
+        switch(option){
+          case 1:
+            //handle fight
+            this.optionsOn = false
+            this.fightOn = true
+          break;
+          case 2:
+            //handle team
+            setTimeout(() => {
+            this.battleText = "What will " + this.userChar.name + " do?"
+        }, 2000);
+            
+            this.battleText = "You're our only hope " + this.userChar.name + "!"
+            
+          break;
+          case 3:
+            //handle item
+            setTimeout(() => {
+            this.battleText = "What will " + this.userChar.name + " do?"
+        }, 2000);
+            this.battleText = "No items in bag."
+          break;
+          case 4:
+            //handle run
+            setTimeout(() => {
+            this.battleText = "What will " + this.userChar.name + " do?"
+        }, 2000);
+            this.battleText = "Can't escape."
+          break;
+        }
+      },
+      resetBattle: function(){
+        //reset data to start new game
+        this.endOn = false;
+        this.fightOn = false;
+        this.optionsOn = true;
+        this.battleText = "What will Charizard do?"
+        this.userAlive = true
+        this.opponentAlive = true
+        this.userHP = 100
+        this.opponentHP = 100
+        this.userFill = 100
+        this.opponentFill = 100
+        this.userHpBar.width = "100%"
+        this.opponentHpBar.width = "100%"
+      }
+    }
+  })
