@@ -1,0 +1,321 @@
+/* ===== ---------- ===== */
+/* =====   GLOBAL   ===== */
+/* ===== ---------- ===== */
+
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+
+:root { /* Initialise variables */
+    --purple: #BA23F6;
+    --dark-purple: #4f095b;
+    --pink: #D916A8;
+    --red: #E81313;
+    --orange: #CC4E00;
+    --yellow: #af8f0e;
+    --lime: #7EAC11;
+    --green: #008A0E;
+    --teal: #008573;
+    --blue: #1071E5;
+    --lavender: #635DFF;
+    --brown: #4D2800;
+    --transparent-brown: #4D2800AA;
+    --cream: #F8F8D8;
+
+    --lineOffset: 0;
+}
+
+@keyframes background { /* Animation used for the background */
+    0% {
+        background: var(--green);
+    }
+
+    10% {
+        background: var(--teal);
+    }
+
+    20% {
+        background: var(--blue);
+    }
+
+    30% {
+        background: var(--lavender);
+    }
+
+    40% {
+        background: var(--purple);
+    }
+
+    50% {
+        background: var(--pink);
+    }
+
+    60% {
+        background: var(--red);
+    }
+
+    70% {
+        background: var(--orange);
+    }
+
+    80% {
+        background: var(--yellow);
+    }
+
+    90% {
+        background: var(--lime);
+    }
+
+    100% {
+        background: var(--green);
+    }
+}
+
+/* ===== ------------------------------------- ===== */
+/* =====   GENERAL TAGS (BODY, DIV, H1 ETC.)   ===== */
+/* ===== ------------------------------------- ===== */
+
+html { /* Apply background-color change animation */
+    animation: background 120s linear infinite;
+    color: white;
+}
+
+html, body { /* Remove margin and padding from html and body */
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0.5em;
+}
+
+header { /* Header (title, subtitle and nav bar) */
+    box-shadow: rgba(0, 0, 0, 0.333) 0px 0px 10px 5px;
+    margin: 0em;
+    margin-bottom: 2em;
+
+    /* Header children will be in a row and spaced evenly (title on the left, nav bar on the right) */
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    align-items: center;
+
+    top: 0em;
+    height: 6em;
+    z-index: 1;
+
+    /* Add background-color change animation (time offset from the body to make it contrast) */
+    animation: background 120s linear -72s infinite;
+}
+
+header #background { /* The background of the header */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #00000055;
+}
+
+#main {
+    margin-top: -0.5em;
+}
+
+header #title h1 {
+    margin: 0px 0px 0.6em 0.5em;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 300;
+    text-shadow: var(--dark-purple) 0px 0px 10px;
+}
+
+header #title span {
+    position: absolute;
+    left: 1em;
+    bottom: 0.3em;
+    font-size: smaller;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+header #title span::before {
+    content: " ";
+    position: relative;
+    display: block;
+    bottom: calc(var(--lineOffset) * 1em);
+    width: calc(100%);
+    height: 2px;
+    background-color: var(--dark-purple);
+    box-shadow: #FFFFFF66 0px 0px 10px;
+    margin-left: 0em;
+}
+
+h3 {
+    margin-left: 0.5em;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 200;
+}
+
+#nav-menu {
+    margin-right: 0.5em;
+}
+
+#nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav-menu ul a {
+    border: solid rgba(0, 0, 0, 0.133);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+    color: var(--cream);
+    outline: transparent solid 0.5em;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+#nav-menu ul li {
+    transition-duration: 0.25s;
+    transition-delay: -0.25s;
+}
+
+#nav-menu ul li::after {
+    content: " ";
+    position: relative;
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--dark-purple);
+    margin-left: 50%;
+    transition-duration: 0.25s;
+    opacity: 0.5;
+}
+
+#nav-menu ul a:hover,
+#nav-menu ul a:focus {
+    background-color: rgba(0, 0, 0, 0.333);
+    border-color: rgba(0, 0, 0, 0.333);
+    color: white;
+    outline: 0em solid rgba(0, 0, 0, 0.333);
+    margin-bottom: 0.5em;
+}
+
+#nav-menu ul a:hover li::after,
+#nav-menu ul a:focus li::after {
+    box-shadow: #FFFFFF66 0px 0px 10px;
+    width: calc(100%);
+    margin-left: 0%;
+    opacity: 1;
+}
+
+/* #nav-menu ul a:hover + a {
+    filter: blur(1px);
+} */
+
+#main-content {
+    margin: 0em 1em;
+    padding: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    box-shadow: rgba(0, 0, 0, 0.333) 0px 0px 10px 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#main-content h2 {
+    font-family: "Roboto Condensed", sans-serif;
+    margin-left: 0.25em;
+}
+
+#main-content h2::after {
+    content: " ";
+    position: relative;
+    display: block;
+    top: 0.25em;
+    width: 100%;
+    height: 4px;
+    animation: background 120s linear -72s infinite;
+    margin-left: -0.25em;
+    opacity: 0.75;
+    box-shadow: #FFFFFF22 0px 0px 10px;
+}
+
+#main-content p {
+    font-family: "PT Sans Narrow", sans-serif;
+    margin-left: 1em;
+}
+
+#main-content ul {
+    font-family: "PT Sans Narrow", sans-serif;
+    list-style: square;
+    background-color: rgba(0, 0, 0, 0.333);
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    margin-left: 0.5em;
+    margin-top: 0.5em;
+    border-radius: 0.25em;
+    margin-right: 1em;
+}
+
+#main-content ul li {
+    margin: 0.5em;
+}
+
+.release {
+    color: #00C400;
+    padding-bottom: 1em;
+    list-style: none;
+    position: relative;
+    left: -0.5em;
+}
+
+.release::after {
+    content: " ";
+    position: relative;
+    display: block;
+    width: calc(100vw - 6.5em);
+    height: 1px;
+    opacity: 0.25;
+    left: -2em;
+    top: 0.25em;
+    background-color: #00C400;
+    box-shadow: #FFFFFF66 0px 0px 10px;
+}
+
+#main-content ul span {
+    font-style: italic;
+    font-size: smaller;
+    color: var(--yellow);
+}
+
+#footer-content {
+    margin-bottom: -0.5em;
+    margin-top: 1em;
+    padding: 0.5em;
+    box-shadow: #00000055 0px 0px 10px 5px;
+    background-color: #FFFFFF88;
+    color: #000000BB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "PT Sans Narrow", sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 0.75em;
+    }
+
+    #title span {
+        visibility: hidden;
+    }
+
+    #title span::before {
+        visibility: visible;
+        bottom: 0em;
+        left: 0.1em;
+        width: 2px;
+        height: 100%;
+        margin-left: 0em;
+    }
+}

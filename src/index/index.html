@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Supe Game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+        <script src="client.js"></script>
+        <script> </script>
+    </head>
+    <body>
+        <header id="header"> <!-- Header, contains the title and the nav menu -->
+            <div id="title"> <!-- Title, also has a subtitle and will contain a psuedo-element line though css -->
+                <h1>Supe Game</h1>
+                <!-- The line will appear here -->
+                <span>Like Pokemon battles, but better.</span>
+            </div>
+
+            <div id="nav-menu"> <!-- Nav menu, contains the links to the other pages -->
+                <ul>
+                    <a href="../battle"> <!-- Link to the battle page (currently under development) -->
+                        <li>Battle Demo</li>
+                    </a>
+                    <a href="about.html"> <!-- Link to the about page (not yet created) -->
+                        <li>About</li>
+                    </a>
+                </ul>
+            </div>
+            <span id="background"></span> <!-- Background for the header, will change colors to contrast with the background -->
+        </header>
+
+        <div id="main"> <!-- Main content, contains the main content of the page -->
+            <div id="main-content">
+                <h2>What is Supe Game?</h2>
+                <p>Supe Game is a game where you can create and battle with your own superpowered characters.<br>
+                It's inspired by Pokemon battles, but with major differences; For example, there are no Pokemon.
+
+                <h2>Features</h2>
+
+                <h3>Character Customization</h3>
+                <ul>
+                    <li>Custom Abilities and Moves</li>
+                    <li>Custom Stats <span>(Strengths and Weaknesses)</span></li>
+                    <li>Custom Inventory <span>(Items, Weapons, Armor)</span></li>
+                    <li>Custom Appearance <span>(Coming Soon)</span></li>
+                </ul>
+
+                <h3>Game Modes</h3>
+                <ul>
+                    <li>Battles</li>
+                    <ul>
+                        <li>CvC - <span>Two players, each controlling one character, battle each other.</span></li>
+                        <li>PvP - <span>Two players, each controlling a team, battle each other.</span></li>
+                        <li>TvT - <span>Two teams, with each player controlling one character, battle each other.</span></li>
+                    </ul>
+
+                    <li>Tournaments - <span>(Coming soon)</span></li>
+                    <ul>
+                        <li>CvC Tournament - <span>CvC battles are held in a tournament format.</span></li>
+                        <li>PvP Tournament - <span>PvP battles are held in a tournament format.</span></li>
+                        <li>TvT Tournament - <span>TvT battles are held in a tournament format.</span></li>
+                        <li>Mixed Tournament - <span>PvP and TvT battles are held in a tournament format.</span></li>
+                    </ul>
+                </ul>
+                
+                <h2>Roadmap</h2>
+                <ul> <!-- spans in the list will show yellow and italicized, 'release' items will be green and have spacing below them -->
+                    <li>Create and test the core game mechanics</li>
+                    <li>Create working demo <span>(Set CvC battle)</span></li> 
+                    <li class="release">Release - V0.1 <span>(Demo)</span></li>
+
+                    <li>Create base character set</li>
+                    <li>'Game' page for changing settings for a new battle <span>(CvC, against computer)</span></li>
+                    <li class="release">Release - V1.0 <span>(Local Battles)</span></li>
+
+                    <li>Add user accounts</li>
+                    <li>Create and test online multiplayer mechanics</li>
+                    <li>Implement online CvC battles</li>
+                    <li>Implement PvP battles</li>
+                    <li>Implement TvT battles</li>
+                    <li class="release">Release - V2.0 <span>(Online Battles)</span></li>
+
+                    <li>Effect customization</li>
+                    <li>'Move' page for creating, editing and sharing moves</li>
+                    <li>'Item' page for creating, editing and sharing items</li>
+                    <li>'Character' page for creating, editing and sharing characters</li>
+                    <li class="release">Release - V3.0 <span>(Basic Customization)</span></li>
+
+                    <li>Split 'Game' page with 'Battle' and 'Tournament' sections</li>
+                    <li>Implement PvP tournaments</li>
+                    <li>Implement TvT tournaments</li>
+                    <li>Implement Mixed tournaments</li>
+                    <li class="release">Release - V4.0 <span>(Tournaments)</span></li>
+
+                    <li>Create custom appearance editor</li>
+                    <li>Create complex effect/move editor</li>
+                    <li class="release">Release - V5.0 <span>(Advanced Customization)</span></li>
+
+                    <li>Improvements, bug fixes, user requests and more</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer> <!-- Footer banner, the year of last update will be displayed here as well as a link to my github -->
+            <div id="footer-content">
+                <span>© 2022 Supe Game</span>
+                <span>Created by <a href="https://github.com/Transit-Lumber">Tristan Bulmer</a></span>
+            </div>
+        </footer>
+    </body>
+</html>
