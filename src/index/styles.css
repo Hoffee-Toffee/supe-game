@@ -86,6 +86,10 @@ html, body { /* Remove margin and padding from html and body */
     padding-bottom: 0.5em;
 }
 
+/* ===== ---------- ===== */
+/* =====   HEADER   ===== */
+/* ===== ---------- ===== */
+
 header { /* Header (title, subtitle and nav bar) */
     box-shadow: rgba(0, 0, 0, 0.333) 0px 0px 10px 5px;
     margin: 0em;
@@ -115,9 +119,9 @@ header #background { /* The background of the header */
     background-color: #00000055;
 }
 
-#main {
-    margin-top: -0.5em;
-}
+/* ===== -------------------- ===== */
+/* =====     HEADER TITLE     ===== */
+/* ===== -------------------- ===== */
 
 header #title h1 {
     margin: 0px 0px 0.6em 0.5em;
@@ -147,11 +151,9 @@ header #title span::before {
     margin-left: 0em;
 }
 
-h3 {
-    margin-left: 0.5em;
-    font-family: 'PT Sans Narrow', sans-serif;
-    font-weight: 200;
-}
+/* ===== ------------------ ===== */
+/* =====     HEADER NAV     ===== */
+/* ===== ------------------ ===== */
 
 #nav-menu {
     margin-right: 0.5em;
@@ -163,11 +165,11 @@ h3 {
 }
 
 #nav-menu ul a {
-    border: solid rgba(0, 0, 0, 0.133);
+    border: solid #00000022;
     padding: 0.5em;
     border-radius: 0.5em;
     margin: 0.5em;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #00000000;
     text-decoration: none;
     color: var(--cream);
     outline: transparent solid 0.5em;
@@ -175,9 +177,14 @@ h3 {
     transition-timing-function: ease-in-out;
 }
 
-#nav-menu ul li {
-    transition-duration: 0.25s;
-    transition-delay: -0.25s;
+#nav-menu ul a:not([href]) {
+    color: #FFFFFF55;
+    border-color: #00000011;
+}
+
+#nav-menu ul a:not([href]):hover {
+    color: #FFFFFF55;
+    border-color: #00000011;
 }
 
 #nav-menu ul li::after {
@@ -192,8 +199,8 @@ h3 {
     opacity: 0.5;
 }
 
-#nav-menu ul a:hover,
-#nav-menu ul a:focus {
+#nav-menu ul a[href]:hover,
+#nav-menu ul a[href]:focus {
     background-color: rgba(0, 0, 0, 0.333);
     border-color: rgba(0, 0, 0, 0.333);
     color: white;
@@ -201,17 +208,31 @@ h3 {
     margin-bottom: 0.5em;
 }
 
-#nav-menu ul a:hover li::after,
-#nav-menu ul a:focus li::after {
+#nav-menu ul a[href]:hover li::after,
+#nav-menu ul a[href]:focus li::after {
     box-shadow: #FFFFFF66 0px 0px 10px;
     width: calc(100%);
     margin-left: 0%;
     opacity: 1;
 }
 
-/* #nav-menu ul a:hover + a {
-    filter: blur(1px);
-} */
+#nav-menu ul a:not([href]) {
+    cursor: default;
+}
+
+/* ===== ---------------- ===== */
+/* =====   MAIN CONTENT   ===== */
+/* ===== ---------------- ===== */
+
+#main {
+    margin-top: -0.5em;
+}
+
+h3 {
+    margin-left: 0.5em;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: 200;
+}
 
 #main-content {
     margin: 0em 1em;
@@ -245,6 +266,10 @@ h3 {
     margin-left: 1em;
 }
 
+/* ===== ----------------------- ===== */
+/* =====     LISTS AND ITEMS     ===== */
+/* ===== ----------------------- ===== */
+
 #main-content ul {
     font-family: "PT Sans Narrow", sans-serif;
     list-style: square;
@@ -260,6 +285,10 @@ h3 {
 #main-content ul li {
     margin: 0.5em;
 }
+
+/* ===== --------------- ===== */
+/* =====     ROADMAP     ===== */
+/* ===== --------------- ===== */
 
 .release {
     color: #00C400;
@@ -288,6 +317,10 @@ h3 {
     color: var(--yellow);
 }
 
+/* ===== -------------- ===== */
+/* =====     FOOTER     ===== */
+/* ===== -------------- ===== */
+
 #footer-content {
     margin-bottom: -0.5em;
     margin-top: 1em;
@@ -300,6 +333,10 @@ h3 {
     align-items: center;
     font-family: "PT Sans Narrow", sans-serif;
 }
+
+/* ===== -------------------------- ===== */
+/* =====     RESPONSIVE STYLING     ===== */
+/* ===== -------------------------- ===== */
 
 @media screen and (max-width: 600px) {
     html {
