@@ -1,4 +1,6 @@
 # supe-game
+<!-- Display screenshot.png -->
+![screenshot](screenshot.png)
 
 Turn based fighting game loosely inspired by Pokémon battles
 
