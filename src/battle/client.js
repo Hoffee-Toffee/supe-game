@@ -20,7 +20,6 @@ function generateCode() { // Generates a random code for the game
 
 // Import the module from data.js
 import { characters } from "./data.js";
-console.log(characters)
 
 var appdata = {
     el: '#app',
@@ -49,7 +48,6 @@ var appdata = {
             }, 100);
         },
         updateButtons: function() { // Updates the buttons in the current menu
-            console.log(this.menu + "/" + this.page);
             var menus = [ // Contains an array of buttons for each menu
                 [ // Main Menu | 0
                     "Move",
@@ -111,8 +109,6 @@ var appdata = {
                     return newOpt;
                 })
             }
-
-            console.log("Screen Width: " + window.innerWidth);
 
             if (window.matchMedia("(min-width: 1100px)").matches) { // If the screen is wide enough, show buttons in a 3x3 grid
                 // 3x3
@@ -180,86 +176,73 @@ var appdata = {
             var firstIndex = (this.page * (size - 2) + 1) % menu.length;
             var lastIndex = menu.length - 1;
 
-            console.log("Prev: " + prev);
-            console.log("Next: " + next);
+            // Make an array with a length of 'size' (each item starts as just the index)
+            var buttons = Array(size).fill().map((_, i) => i);
 
-            console.log("First Index: " + firstIndex);
-            console.log("Last Index: " + lastIndex);
-
-            var buttons = [];
-
-            for (var i = firstIndex; i < firstIndex + size; i++) { // Add the buttons for the current page
-                console.log(i)
+            buttons = buttons.map( button => { // Disables moves that are not charged
+                var i = buttons.indexOf(button) + firstIndex;
 
                 if (i == prev) { // Add prev button
-                    buttons.push(
-                        {
-                            onClick: function() {
-                                this.page -= 1;
-                                this.updateButtons();
-                            }.bind(this),
-                            class: "navigate",
-                            name: "<"
-                        }
-                    );
+                    var newButton = {
+                        onClick: function() {
+                            this.page -= 1;
+                            this.updateButtons();
+                        }.bind(this),
+                        class: "navigate",
+                        name: "<"
+                    }
+                    return newButton;
                 }
                 else if (i == firstIndex + size - 1 && lastIndex > firstIndex + size - 1) { // If it's the last button and more buttons exist after this page, add a ">" button
-                    buttons.push(
-                        {
-                            onClick: function() {
-                                this.page += 1;
-                                this.updateButtons();
-                            }.bind(this),
-                            class: "navigate",
-                            name: ">"
-                        }
-                    );
+                    var newButton = {
+                        onClick: function() {
+                            this.page += 1;
+                            this.updateButtons();
+                        }.bind(this),
+                        class: "navigate",
+                        name: ">"
+                    }
+                    return newButton;
                 }
                 else if (menu[i] == undefined) { // Display a disabled blank space if there is no button
-                    buttons.push(
-                        {
-                            onClick: null,
-                            class: "disabled",
-                            name: ""
-                        }
-                    );
+                    var newButton = {
+                        onClick: null,
+                        class: "disabled",
+                        name: ""
+                    }
+                    return newButton;
                 }
                 else if (i < prev) { // Display all buttons before the prev button
-                    console.log(menu[i]);
-                    buttons.push(
-                        {
-                            onClick: function() {
-                                this.processOption(this.menu + "/" + i)
-                            }.bind(this, i),
-                            class: "",
-                            name: menu[i].name
-                        }
-                    );
+                    var newButton = {
+                        onClick: function() {
+                            this.processOption(this.menu + "/" + i)
+                        }.bind(this),
+                        class: menu[i].class,
+                        name: menu[i].name
+                    }
+                    return newButton;
                 }
                 else if (i > prev && i < next) { // Display all buttons after the prev button
-                    buttons.push(
-                        {
-                            onClick: function() {
-                                this.processOption(this.menu + "/" + (i - 1))
-                            }.bind(this, i),
-                            class: "",
-                            name: menu[i - 1].name
-                        }
-                    );
+                    var newButton = {
+                        onClick: function() {
+                            this.processOption(this.menu + "/" + (i - 1))
+                        }.bind(this),
+                        class: menu[i - 1].class,
+                        name: menu[i - 1].name
+                    }
+                    return newButton;
                 }
                 else { // Add disabled blank spaces for all other buttons
-                    buttons.push(
-                        {
-                            onClick: null,
-                            class: "disabled",
-                            name: ""
-                        }
-                    );
+                    var newButton = {
+                        onClick: null,
+                        class: "disabled",
+                        name: ""
+                    }
+                    return newButton;
                 }
-            }
+            });
 
             this.buttons = buttons; // The new set of buttons will now be updated and displayed
-            console.log(buttons)
         },
         useMove: function(move, user, target, computer = false) { // Use a move on a target
             var applied = false; // Whether the move was applied or not
@@ -288,7 +271,6 @@ var appdata = {
             }
 
             if (!computer) { // A user just completed their turn, so it's now the computer's turn (the computer will now pick a move and use it instantly)
-                console.log("User -> Computer: " + computer);
                 // Now it's the opponent's turn (computer)
                 // Need to generate a random charged move
                 var moves = this.oppoChar.allMoves().filter(move => move.charge == 0);
@@ -303,18 +285,16 @@ var appdata = {
                 this.useMove(move, this.oppoChar, target, true);
             }
             else { // The computer just completed their turn, so it's now the user's turn
-                console.log("Computer -> User: " + computer);
             }
         },
         processOption: function (option) { // Process button clicks for the menu
-            console.log("Processing option: " + option);
             if (option == "0/0") { // Menu -> Move
                 this.optionsOn = false
                 this.fightOn = true
                 this.menu = "1";
             }
             else if (option.split("/")[0] == "1") { // Move -> Use Move
-                this.useMove(this.userChar.moves[option.split("/")[1]], this.userChar, this.oppoChar);
+                this.useMove(this.userChar.allMoves()[option.split("/")[1]], this.userChar, this.oppoChar);
             }
             else if (option == "0/1") { // Menu -> Switch Character
                 setTimeout(() => {
@@ -344,7 +324,7 @@ var appdata = {
             return Math.random() < chance;
         },
         decToPer: function(decimal) { // Convert a decimal to a percentage rounded to 2 decimal points e.g (0.5 -> 50.00%)
-            return Math.round(decimal * 1000) / 10 + "%";
+            return Math.round(decimal * 10000) / 100 + "%";
         },
         applyEffect: function(effect, user, target) { // Apply an effect to a target
             var targetArr = []
@@ -396,7 +376,7 @@ var appdata = {
                 // Calculates the strength of the effect and applies it to the target
                 var strength = effect.strength + this.randRange(effect.strengthVar); // Calculates the strength of the effect
                 var strengthAbsorbed = targetStats[effect.type].absorb + this.randRange(targetStats[effect.type].absorbVar); // Calculates the amount of the effect that is absorbed by the target
-            
+
                 // If the effect is negative then add strengthAbsorbed to the strength of the effect
                 // If the effect is positive then subtract strengthAbsorbed from the strength of the effect
                 if (effect.strength < 0) {
@@ -527,7 +507,6 @@ var appdata = {
                 moves.forEach(move => {
                     // Change the charge of the move if it's not 0
                     move.charge -= (move.charge > 0) ? 1 : 0;
-                    console.log(move.name + " charge: " + move.charge);
                 })
             })
         },
@@ -591,10 +570,10 @@ var appdata = {
             var green = parseInt(ceilColor.substring(3, 5), 16) * ratio + parseInt(floorColor.substring(3, 5), 16) * (1 - ratio);
             var blue = parseInt(ceilColor.substring(5, 7), 16) * ratio + parseInt(floorColor.substring(5, 7), 16) * (1 - ratio);
 
-            // Converts the integers back to hex values
-            red = Math.round(red).toString(16);
-            green = Math.round(green).toString(16);
-            blue = Math.round(blue).toString(16);
+            // Converts the integers back to hex values (capatilized)
+            red = Math.round(red).toString(16).toUpperCase();
+            green = Math.round(green).toString(16).toUpperCase();
+            blue = Math.round(blue).toString(16).toUpperCase();
 
             // Fixes the hex values that are only one character long (e.g. 0 instead of 00 or 9 instead of 09)
             // Adds the RGB values together with the # in front to make a hex color
@@ -754,12 +733,15 @@ var appdata = {
 }
 
 window.onload = function() {
-    // Creates the app
-    new Vue(appdata)
-
-    // Change title
-    document.title = "Battle: " + settings.userName + " vs " + settings.oppoName + " (Supe Game)";
+    // Tries to create the app
+    try {
+        new Vue(appdata)
+        document.title = "Battle: " + settings.userName + " vs " + settings.oppoName + " (Supe Game)";
+    }
+    catch (err) {
+        console.log(err);
+    }
 }
 
 // Exports the appdata so it can be used in other files (for testing)
-export default appdata;
+export var appdata;
