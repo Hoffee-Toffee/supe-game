@@ -359,31 +359,37 @@ var appdata = {
             for (var i = 0; i < targetArr.length; i++) {
                 var targetChar = targetArr[i];
                 var targetStats = this.statChanges(targetChar, "sum"); // The stats of the target
-        
+
                 // First calculates if the user misses the target
                 var hitChance = effect.effectiveness + this.randRange(effect.effectivenessVar); // Calculates the chance that the user would hit the target
-                var dodgeChance = targetStats[effect.type].dodge + this.randRange(targetStats[effect.type].dodgeVar); // Calculates the chance that the target would dodge the user's attack
+
+                // Calculates the strength of the effect 
+                var strength = effect.strength + this.randRange(effect.strengthVar);
 
                 if (!this.randChance(hitChance)) { // If the user misses the target, then the effect is not applied
                     this.addToLog("... but " + user.name + " missed!");
                     return false;
                 }
-                else if (this.randChance(dodgeChance)) { // If the target dodges/resists the attack, then the effect is not applied
-                    this.addToLog("... but " + targetChar.name + " dodged!");
-                    return false;
-                }
-        
-                // Calculates the strength of the effect and applies it to the target
-                var strength = effect.strength + this.randRange(effect.strengthVar); // Calculates the strength of the effect
-                var strengthAbsorbed = targetStats[effect.type].absorb + this.randRange(targetStats[effect.type].absorbVar); // Calculates the amount of the effect that is absorbed by the target
 
-                // If the effect is negative then add strengthAbsorbed to the strength of the effect
-                // If the effect is positive then subtract strengthAbsorbed from the strength of the effect
-                if (effect.strength < 0) {
-                    strength += strengthAbsorbed;
-                }
-                else if (effect.strength > 0) {
-                    strength -= strengthAbsorbed;
+                // If the effect isn't a stat change, check if the effect is dodged and calculate how much is absorbed
+                if (effect.type !== "stats") {
+                    var dodgeChance = targetStats[effect.type].dodge + this.randRange(targetStats[effect.type].dodgeVar); // Calculates the chance that the target would dodge the user's attack
+
+                    if (this.randChance(dodgeChance)) { // If the target dodges/resists the attack, then the effect is not applied
+                        this.addToLog("... but " + targetChar.name + " dodged!");
+                        return false;
+                    }
+
+                    var strengthAbsorbed = targetStats[effect.type].absorb + this.randRange(targetStats[effect.type].absorbVar); // Calculates the amount of the effect that is absorbed by the target
+                    
+                    // If the effect is negative then add strengthAbsorbed to the strength of the effect
+                    // If the effect is positive then subtract strengthAbsorbed from the strength of the effect
+                    if (effect.strength < 0) {
+                        strength += strengthAbsorbed;
+                    }
+                    else if (effect.strength > 0) {
+                        strength -= strengthAbsorbed;
+                    }
                 }
 
                 // Applies the effect to the target

@@ -291,7 +291,7 @@ export var characters = [
                     [
                         new Effect(
                             "Damage",
-                            "physical",
+                            "stats",
                             "target",
                             false,
                             "health",
@@ -523,7 +523,7 @@ export var characters = [
                     ),
                     new Effect(
                         "Move Toll",
-                        null,
+                        "stats",
                         "user",
                         false,
                         "health",
