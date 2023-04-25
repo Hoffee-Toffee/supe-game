@@ -446,6 +446,8 @@ var appdata = {
             team.forEach(member => { // Loop through all members of the team
                 var stats = this.statChanges(member, "sum"); // The stats of the member
 
+                console.log(JSON.stringify(member.effects, null, 2));
+
                 // Calculate the regen factor for the character (using effects)
                 var regenFactor = member.healthRegen + this.randRange(member.healthRegenVar) + member.effects.reduce((acc, cur) => {
                     if (cur.stat == ["health", "regen"]) {
@@ -500,8 +502,8 @@ var appdata = {
                     }
         
                     // Change the charge of the effect, and remove the effect if it is finished
-                    effect.charge--;
-                    if (effect.charge <= 0) {
+                    effect.duration--;
+                    if (effect.duration <= 0) {
                         this.addToLog(member.name + "'s " + effect.name + " effect has finished!");
                         member.effects.splice(member.effects.indexOf(effect), 1);
                     }
